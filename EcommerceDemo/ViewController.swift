@@ -42,9 +42,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProductsTableViewCell") as? ProductsTableViewCell else {
-            return UITableViewCell()}
+            return UITableViewCell()
+        }
+        cell.products=productData?.response?[indexPath.row]
+        cell.index = indexPath.row
+        cell.onClickSeeAllClosure = { index in
+            if let indexp = index{
+                self.moveOnProductListing(index: indexp)
+            }
+        }
+        
         return cell
     }
     
+    
+    func moveOnProductListing(index : Int){
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ProductListViewController") as? ProductListViewController else {
+            return
+        }
+        vc.productList = productData?.response?[index]
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
