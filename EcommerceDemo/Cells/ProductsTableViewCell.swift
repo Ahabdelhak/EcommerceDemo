@@ -25,9 +25,11 @@ class ProductsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        print(products?.products?.count)
+
         // Initialization code
         collectionViewCell.delegate = self
-        collectionViewCell.delegate = self
+        collectionViewCell.dataSource = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -41,7 +43,7 @@ class ProductsTableViewCell: UITableViewCell {
     }
 }
 
-extension ProductsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProductsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
      func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          return products?.products?.count ?? 0
      }
@@ -55,4 +57,9 @@ extension ProductsTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
          return cell
      }
      
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize.init(width: ((collectionViewCell.frame.width / 2 ) - 10), height: ((collectionViewCell.frame.height) - 10))
+
+
+        }
  }

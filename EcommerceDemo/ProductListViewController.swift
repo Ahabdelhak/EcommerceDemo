@@ -33,8 +33,15 @@ class ProductListViewController: UIViewController, UITableViewDelegate, UITableV
         cell.productDesc.text=productList?.products?[indexPath.row].description
         cell.productPrice.text=productList?.products?[indexPath.row].price
         
-        cell.imageView?.image=UIImage(named: productList?.products?[indexPath.row].imageName ?? "")
+        cell.productImage?.image=UIImage(named: productList?.products?[indexPath.row].imageName ?? "")
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ProductDetailsViewController") as? ProductDetailsViewController else {
+            return
+        }
+        vc.productDetails = productList?.products?[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
