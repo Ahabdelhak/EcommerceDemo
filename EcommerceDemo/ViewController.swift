@@ -52,6 +52,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         
+        cell.didSelectClosure = {tableIndex , colIndex in
+            if let tableIndexP = tableIndex , let colIndexP = colIndex {
+                self.moveOnProductDetails(tableIndex: tableIndexP, colIndex: colIndexP)
+            }
+            
+        }
+        
         return cell
     }
     
@@ -63,5 +70,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.productList = productData?.response?[index]
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func moveOnProductDetails(tableIndex: Int,colIndex : Int){
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ProductDetailsViewController") as? ProductDetailsViewController else {
+            return
+        }
+        vc.productDetails=productData?.response?[tableIndex].products?[colIndex]
+        navigationController?.pushViewController(vc, animated: true)
+    }
+
 }
 

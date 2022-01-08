@@ -8,6 +8,7 @@
 import UIKit
 
 typealias SeeAllClosure = ((_ index:Int?) -> Void)
+typealias DidSelectClosure = ((_ tableIndex:Int?,_ collectionIndex:Int?) -> Void)
 
 class ProductsTableViewCell: UITableViewCell {
 
@@ -16,6 +17,8 @@ class ProductsTableViewCell: UITableViewCell {
     
     var index:Int?
     var onClickSeeAllClosure: SeeAllClosure?
+    var didSelectClosure: DidSelectClosure?
+
     var products:Product? {
         didSet {
             categoryLabel.text = products?.categoryName
@@ -25,7 +28,6 @@ class ProductsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print(products?.products?.count)
 
         // Initialization code
         collectionViewCell.delegate = self
@@ -59,7 +61,8 @@ extension ProductsTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
      
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize.init(width: ((collectionViewCell.frame.width / 2 ) - 10), height: ((collectionViewCell.frame.height) - 10))
-
-
         }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        didSelectClosure?(index,indexPath.row)
+    }
  }
