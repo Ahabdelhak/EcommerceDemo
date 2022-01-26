@@ -10,6 +10,8 @@
 		D01671632771074F008E0337 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01671622771074F008E0337 /* ProductListViewController.swift */; };
 		D016716527710C8C008E0337 /* ProductDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D016716427710C8C008E0337 /* ProductDetailsTableViewCell.swift */; };
 		D04045CC27725DB700F6E2DA /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04045CB27725DB700F6E2DA /* ProductDetailsViewController.swift */; };
+		D073140527A1E62200A81E9D /* RegisterationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073140427A1E62200A81E9D /* RegisterationViewController.swift */; };
+		D073140727A1ED6B00A81E9D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073140627A1ED6B00A81E9D /* LoginViewController.swift */; };
 		D073BF512766B1B900412E89 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073BF502766B1B900412E89 /* ProductCollectionViewCell.swift */; };
 		D0A61C69274FAAC30049000D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A61C68274FAAC30049000D /* AppDelegate.swift */; };
 		D0A61C6B274FAAC30049000D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A61C6A274FAAC30049000D /* SceneDelegate.swift */; };
@@ -23,6 +25,7 @@
 		D0A61C99274FACAF0049000D /* EcommerceJson.json in Resources */ = {isa = PBXBuildFile; fileRef = D0A61C98274FACAF0049000D /* EcommerceJson.json */; };
 		D0A61C9C274FC63F0049000D /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A61C9B274FC63F0049000D /* ProductsTableViewCell.swift */; };
 		D0A61C9F274FC87B0049000D /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A61C9E274FC87B0049000D /* ProductModel.swift */; };
+		D0E99C91279343D5004E5ED3 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0E99C8F279343D5004E5ED3 /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,8 @@
 		D01671622771074F008E0337 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		D016716427710C8C008E0337 /* ProductDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		D04045CB27725DB700F6E2DA /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		D073140427A1E62200A81E9D /* RegisterationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterationViewController.swift; sourceTree = "<group>"; };
+		D073140627A1ED6B00A81E9D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D073BF502766B1B900412E89 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0A61C65274FAAC30049000D /* EcommerceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcommerceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A61C68274FAAC30049000D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		D0A61C98274FACAF0049000D /* EcommerceJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = EcommerceJson.json; path = ../../../EcommerceDemoView/CollectionViewInsideTableView/EcommerceUI/EcommerceUI/EcommerceJson.json; sourceTree = "<group>"; };
 		D0A61C9B274FC63F0049000D /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		D0A61C9E274FC87B0049000D /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		D0E99C90279343D5004E5ED3 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,9 @@
 				D0A61C73274FAAC50049000D /* LaunchScreen.storyboard */,
 				D0A61C76274FAAC50049000D /* Info.plist */,
 				D01671622771074F008E0337 /* ProductListViewController.swift */,
+				D0E99C8F279343D5004E5ED3 /* DataModel.xcdatamodeld */,
+				D073140427A1E62200A81E9D /* RegisterationViewController.swift */,
+				D073140627A1ED6B00A81E9D /* LoginViewController.swift */,
 			);
 			path = EcommerceDemo;
 			sourceTree = "<group>";
@@ -296,13 +305,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D073140727A1ED6B00A81E9D /* LoginViewController.swift in Sources */,
 				D0A61C6D274FAAC30049000D /* ViewController.swift in Sources */,
 				D0A61C9C274FC63F0049000D /* ProductsTableViewCell.swift in Sources */,
+				D073140527A1E62200A81E9D /* RegisterationViewController.swift in Sources */,
 				D016716527710C8C008E0337 /* ProductDetailsTableViewCell.swift in Sources */,
 				D01671632771074F008E0337 /* ProductListViewController.swift in Sources */,
 				D0A61C69274FAAC30049000D /* AppDelegate.swift in Sources */,
 				D0A61C6B274FAAC30049000D /* SceneDelegate.swift in Sources */,
 				D04045CC27725DB700F6E2DA /* ProductDetailsViewController.swift in Sources */,
+				D0E99C91279343D5004E5ED3 /* DataModel.xcdatamodeld in Sources */,
 				D073BF512766B1B900412E89 /* ProductCollectionViewCell.swift in Sources */,
 				D0A61C9F274FC87B0049000D /* ProductModel.swift in Sources */,
 			);
@@ -662,6 +674,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0E99C8F279343D5004E5ED3 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0E99C90279343D5004E5ED3 /* Model.xcdatamodel */,
+			);
+			currentVersion = D0E99C90279343D5004E5ED3 /* Model.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D0A61C5D274FAAC30049000D /* Project object */;
 }
